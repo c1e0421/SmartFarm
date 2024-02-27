@@ -1,0 +1,467 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: •ÏVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: user user, it, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.33.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.15
+Assembler:       Armasm.exe V6.15
+Linker/Locator:  ArmLink.exe V6.15
+Library Manager: ArmAr.exe V6.15
+Hex Converter:   FromElf.exe V6.15
+CPU DLL:         SARMCM3.DLL V5.33.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      PEMicro\Pemicro_ArmCortexInterface.dll V1.3.0.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+K:\TermProject\2145.uvprojx
+Project File Date:  12/07/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.15', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+compiling startup.c...
+compiling system_S32K144.c...
+clocks_and_modes.c(101): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    |SCG_RCCR_DIVCORE(0b01)      /* DIVCORE=1, div. by 2: Core clock = 160/2 MHz = 80 MHz               */
+                      ^
+clocks_and_modes.c(102): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    |SCG_RCCR_DIVBUS(0b01)       /* DIVBUS=1, div. by 2: bus clock = 40 MHz                                     */
+                     ^
+clocks_and_modes.c(103): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+    |SCG_RCCR_DIVSLOW(0b10);     /* DIVSLOW=2, div. by 2: SCG slow, flash clock= 26 2/3 MHz     */
+                      ^
+3 warnings generated.
+compiling clocks_and_modes.c...
+LPUART.c(6): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+ PCC->PCCn[PCC_LPUART1_INDEX] |= PCC_PCCn_PCS(0b001) /* Clock Src= 1 (SOSCDIV2_CLK) */
+                                              ^
+LPUART.c(3): warning: no previous prototype for function 'LPUART1_init' [-Wmissing-prototypes]
+void LPUART1_init(void) /* Init. summary: 9600 baud, 1 stop bit, 8 bit format, no parity */
+     ^
+LPUART.c(3): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LPUART1_init(void) /* Init. summary: 9600 baud, 1 stop bit, 8 bit format, no parity */
+^
+static 
+LPUART.c(34): warning: no previous prototype for function 'LPUART1_transmit_char' [-Wmissing-prototypes]
+void LPUART1_transmit_char(char send) { /* Function to Transmit single Char */
+     ^
+LPUART.c(34): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LPUART1_transmit_char(char send) { /* Function to Transmit single Char */
+^
+static 
+LPUART.c(39): warning: no previous prototype for function 'LPUART1_transmit_string' [-Wmissing-prototypes]
+void LPUART1_transmit_string(char data_string[]) { /* Function to Transmit whole string */
+     ^
+LPUART.c(39): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LPUART1_transmit_string(char data_string[]) { /* Function to Transmit whole string */
+^
+static 
+LPUART.c(48): warning: implicit conversion loses integer precision: 'volatile uint32_t' (aka 'volatile unsigned int') to 'char' [-Wimplicit-int-conversion]
+ receive= LPUART1->DATA; /* Read received data*/
+        ~ ~~~~~~~~~^~~~
+LPUART.c(46): warning: no previous prototype for function 'LPUART1_receive_char' [-Wmissing-prototypes]
+char LPUART1_receive_char(void) { /* Function to Receive single Char */
+     ^
+LPUART.c(46): note: declare 'static' if the function is not intended to be used outside of this translation unit
+char LPUART1_receive_char(void) { /* Function to Receive single Char */
+^
+static 
+LPUART.c(56): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+LPUART.c(52): warning: no previous prototype for function 'LPUART1_receive_and_echo_char' [-Wmissing-prototypes]
+void LPUART1_receive_and_echo_char(void) { /* Function to echo received char back */
+     ^
+LPUART.c(52): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LPUART1_receive_and_echo_char(void) { /* Function to echo received char back */
+^
+static 
+8 warnings generated.
+compiling LPUART.c...
+124.c(13): warning: no previous extern declaration for non-static variable 'lpit0_ch2_flag_counter' [-Wmissing-variable-declarations]
+int lpit0_ch0_flag_counter, lpit0_ch1_flag_counter, lpit0_ch2_flag_counter = 0;
+                                                    ^
+124.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int lpit0_ch0_flag_counter, lpit0_ch1_flag_counter, lpit0_ch2_flag_counter = 0;
+^
+124.c(14): warning: no previous extern declaration for non-static variable 'FND_DATA' [-Wmissing-variable-declarations]
+unsigned int FND_DATA[10]={0x7E, 0x0C,0xB6,0x9E,0xCC,0xDA,0xFA,0x4E,0xFE,0xCE};
+             ^
+124.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int FND_DATA[10]={0x7E, 0x0C,0xB6,0x9E,0xCC,0xDA,0xFA,0x4E,0xFE,0xCE};
+^
+124.c(15): warning: no previous extern declaration for non-static variable 'FND_SEL' [-Wmissing-variable-declarations]
+unsigned int FND_SEL[4]={0x0100,0x0200,0x0400,0x0800};
+             ^
+124.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int FND_SEL[4]={0x0100,0x0200,0x0400,0x0800};
+^
+124.c(16): warning: no previous extern declaration for non-static variable 'j' [-Wmissing-variable-declarations]
+unsigned int j=0; /*FND select pin index */
+             ^
+124.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int j=0; /*FND select pin index */
+^
+124.c(17): warning: no previous extern declaration for non-static variable 'num3' [-Wmissing-variable-declarations]
+unsigned int num,num0,num1,num2,num3 =0;
+                                ^
+124.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int num,num0,num1,num2,num3 =0;
+^
+124.c(18): warning: no previous extern declaration for non-static variable 'Dtime' [-Wmissing-variable-declarations]
+unsigned int Dtime = 0;
+             ^
+124.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int Dtime = 0;
+^
+124.c(21): warning: no previous extern declaration for non-static variable 'BestLight' [-Wmissing-variable-declarations]
+unsigned int BestLight=1;
+             ^
+124.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int BestLight=1;
+^
+124.c(22): warning: no previous extern declaration for non-static variable 'BestHM' [-Wmissing-variable-declarations]
+unsigned int BestHM=LettuceHM;
+             ^
+124.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int BestHM=LettuceHM;
+^
+124.c(23): warning: no previous extern declaration for non-static variable 'BestTemp' [-Wmissing-variable-declarations]
+unsigned int    BestTemp=LettuceTemp;   /*Each Mode, Default=Lettuce*/
+                ^
+124.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int    BestTemp=LettuceTemp;   /*Each Mode, Default=Lettuce*/
+^
+124.c(24): warning: no previous extern declaration for non-static variable 'External_PIN' [-Wmissing-variable-declarations]
+unsigned int External_PIN=0;
+             ^
+124.c(24): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int External_PIN=0;
+^
+124.c(25): warning: no previous extern declaration for non-static variable 'adcResultInMv2' [-Wmissing-variable-declarations]
+uint32_t adcResultInMv3,adcResultInMv2=0;
+                        ^
+124.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t adcResultInMv3,adcResultInMv2=0;
+^
+124.c(26): warning: no previous extern declaration for non-static variable 'flag' [-Wmissing-variable-declarations]
+unsigned int flag = 0; /*flag for Water Motor*/
+             ^
+124.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int flag = 0; /*flag for Water Motor*/
+^
+124.c(42): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTC->PDDR &= ~(1<<10);          /* Port C10 Port Input set, value '0'*/
+                          ~~ ^~~~~~~~
+124.c(43): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTC->PDDR &= ~(1<<11);          /* Port C11 Pory Input set, value '0'*/
+                          ~~ ^~~~~~~~
+124.c(44): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTC->PDDR &= ~(1<<12);          /* Port C12 Port Input set, value '0'*/
+                          ~~ ^~~~~~~~
+124.c(45): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTC->PDDR &= ~(1<<13);          /* Port C13 Port Input set, value '0'*/
+                          ~~ ^~~~~~~~
+124.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                PTC->PDDR &= ~(1<<9);           /* Port C14 Pory Input set, value '0'*/
+                          ~~ ^~~~~~~
+124.c(29): warning: no previous prototype for function 'PORT_init' [-Wmissing-prototypes]
+void PORT_init (void){          
+     ^
+124.c(29): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PORT_init (void){          
+^
+static 
+124.c(94): warning: no previous prototype for function 'WDOG_disable' [-Wmissing-prototypes]
+void WDOG_disable (void) //WatchDog Disable
+     ^
+124.c(94): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void WDOG_disable (void) //WatchDog Disable
+^
+static 
+124.c(102): warning: no previous prototype for function 'LPIT0_init' [-Wmissing-prototypes]
+void LPIT0_init (uint32_t delay){
+     ^
+124.c(102): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LPIT0_init (uint32_t delay){
+^
+static 
+124.c(141): warning: implicit conversion changes signedness: 'volatile int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+   LPIT0_init(us);           /* Initialize PIT0 for 1 second timeout  */
+   ~~~~~~~~~~ ^~
+124.c(140): warning: no previous prototype for function 'delay_us' [-Wmissing-prototypes]
+void delay_us (volatile int us){
+     ^
+124.c(140): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_us (volatile int us){
+^
+static 
+124.c(148): warning: no previous prototype for function 'NVIC_init_IRQs' [-Wmissing-prototypes]
+void NVIC_init_IRQs(void){
+     ^
+124.c(148): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void NVIC_init_IRQs(void){
+^
+static 
+124.c(178): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PTD->PDDR &= ~(1<<10);                                          /*PORT D10 = input      */
+                  ~~ ^~~~~~~~
+124.c(190): warning: declaration shadows a variable in the global scope [-Wshadow]
+                        for(int j=0;j<8;j++){
+                                ^
+124.c(16): note: previous declaration is here
+unsigned int j=0; /*FND select pin index */
+             ^
+124.c(193): warning: operator '<<' has lower precedence than '-'; '-' will be evaluated first [-Wshift-op-parentheses]
+                                        recData[i] |= 1<<7-j;           /*Binary Humid, Demical Humid, Binary Temp, Demical Temp, CheckSum value        */
+                                                       ~~~^~
+124.c(193): note: place parentheses around the '-' expression to silence this warning
+                                        recData[i] |= 1<<7-j;           /*Binary Humid, Demical Humid, Binary Temp, Demical Temp, CheckSum value        */
+                                                          ^
+                                                         (  )
+124.c(163): warning: no previous prototype for function 'getHumidity' [-Wmissing-prototypes]
+void getHumidity(void) { //Humid&Temp Sensor
+     ^
+124.c(163): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void getHumidity(void) { //Humid&Temp Sensor
+^
+static 
+124.c(205): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PORTC->PCR[10] &= ~(0x01000000); // Port Control Register ISF bit '0' set
+                       ~~ ^~~~~~~~~~~~~
+124.c(206): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PORTC->PCR[11] &= ~(0x01000000); // Port Control Register ISF bit '0' set
+                       ~~ ^~~~~~~~~~~~~
+124.c(207): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PORTC->PCR[12] &= ~(0x01000000); // Port Control Register ISF bit '0' set
+                       ~~ ^~~~~~~~~~~~~
+124.c(208): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PORTC->PCR[13] &= ~(0x01000000); // Port Control Register ISF bit '0' set
+                       ~~ ^~~~~~~~~~~~~
+124.c(209): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        PORTC->PCR[9] &= ~(0x01000000); // Port Control Register ISF bit '0' set
+                      ~~ ^~~~~~~~~~~~~
+124.c(222): warning: implicit declaration of function 'LPUART1_transmit_string' is invalid in C99 [-Wimplicit-function-declaration]
+                LPUART1_transmit_string("Humid is");
+                ^
+124.c(223): warning: implicit declaration of function 'LPUART1_transmit_char' is invalid in C99 [-Wimplicit-function-declaration]
+                LPUART1_transmit_char(humi2);
+                ^
+124.c(237): warning: implicit declaration of function 'LPUART1_transmit_string' is invalid in C99 [-Wimplicit-function-declaration]
+                        LPUART1_transmit_string("Enough Water\n");
+                        ^
+124.c(240): warning: implicit declaration of function 'LPUART1_transmit_string' is invalid in C99 [-Wimplicit-function-declaration]
+                        LPUART1_transmit_string("Not Much Water\n");
+                        ^
+124.c(243): warning: implicit declaration of function 'LPUART1_transmit_string' is invalid in C99 [-Wimplicit-function-declaration]
+                        LPUART1_transmit_string("Almost No Water\n");
+                        ^
+124.c(262): warning: implicit declaration of function 'LPUART1_transmit_string' is invalid in C99 [-Wimplicit-function-declaration]
+                        LPUART1_transmit_string("Current Mode: Lettuce\n");
+                        ^
+124.c(203): warning: no previous prototype for function 'PORTC_IRQHandler' [-Wmissing-prototypes]
+void PORTC_IRQHandler(void){
+     ^
+124.c(203): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void PORTC_IRQHandler(void){
+^
+static 
+124.c(294): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        num3=(number/1000)%10;
+            ~~~~~~~~~~~~~~^~~
+124.c(295): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        num2=(number/100)%10;
+            ~~~~~~~~~~~~~^~~
+124.c(296): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        num1=(number/10)%10;
+            ~~~~~~~~~~~~^~~
+124.c(297): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        num0= number%10;
+            ~ ~~~~~~^~~
+124.c(304): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   delay_us(Dtime);
+   ~~~~~~~~ ^~~~~
+124.c(312): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   delay_us(Dtime);
+   ~~~~~~~~ ^~~~~
+124.c(320): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   delay_us(Dtime);
+   ~~~~~~~~ ^~~~~
+124.c(328): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   delay_us(Dtime);
+   ~~~~~~~~ ^~~~~
+124.c(290): warning: no previous prototype for function 'Seg_out' [-Wmissing-prototypes]
+void Seg_out(int number){
+     ^
+124.c(290): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Seg_out(int number){
+^
+static 
+124.c(340): warning: binary integer literals are a GNU extension [-Wgnu-binary-literal]
+        PCC->PCCn[PCC_FTM0_INDEX] |= PCC_PCCn_PCS(0b010)                //Clocksrc=1, 8MHz SIRCDIV1_CLK
+                                                  ^
+124.c(336): warning: no previous prototype for function 'FTM_init' [-Wmissing-prototypes]
+void FTM_init (void){
+     ^
+124.c(336): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void FTM_init (void){
+^
+static 
+124.c(367): warning: no previous prototype for function 'FTM0_CH5_PWM' [-Wmissing-prototypes]
+void FTM0_CH5_PWM (int i){//uint32_t i){ //FTM for Water Pump
+     ^
+124.c(367): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void FTM0_CH5_PWM (int i){//uint32_t i){ //FTM for Water Pump
+^
+static 
+124.c(374): warning: implicit conversion changes signedness: 'int' to 'uint32_t' (aka 'unsigned int') [-Wsign-conversion]
+        FTM0->CONTROLS[1].CnV = i;//8000~0 duty; ex(7200=> Duty 0.1 / 800=>Duty 0.9)
+                              ~ ^
+124.c(372): warning: no previous prototype for function 'FTM0_CH1_PWM' [-Wmissing-prototypes]
+void FTM0_CH1_PWM (int i){//uint32_t i){ //FTM for LED
+     ^
+124.c(372): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void FTM0_CH1_PWM (int i){//uint32_t i){ //FTM for LED
+^
+static 
+124.c(379): warning: no previous prototype for function 'FTM0_CH3_PWM' [-Wmissing-prototypes]
+void FTM0_CH3_PWM (int i){//uint32_t i){ //FTM for Servo
+     ^
+124.c(379): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void FTM0_CH3_PWM (int i){//uint32_t i){ //FTM for Servo
+^
+static 
+124.c(386): warning: no previous prototype for function 'LPIT0_Ch2_IRQHandler' [-Wmissing-prototypes]
+void LPIT0_Ch2_IRQHandler (void){         /* delay counter */
+     ^
+124.c(386): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LPIT0_Ch2_IRQHandler (void){         /* delay counter */
+^
+static 
+124.c(398): warning: no previous prototype for function 'LPIT0_Ch1_IRQHandler' [-Wmissing-prototypes]
+void LPIT0_Ch1_IRQHandler (void){               /* delay = 60s counter */
+     ^
+124.c(398): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LPIT0_Ch1_IRQHandler (void){               /* delay = 60s counter */
+^
+static 
+124.c(428): warning: implicit declaration of function 'LPUART1_init' is invalid in C99 [-Wimplicit-function-declaration]
+        LPUART1_init(); /* Initialize LPUART @ 9600*/
+        ^
+124.c(441): warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wfloat-conversion]
+                D=adcResultInMv*1.6;  /* 5000*1.6=8000*/
+                 ~~~~~~~~~~~~~~^~~~
+124.c(449): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+                        FTM0_CH3_PWM(adcResultInMv);
+                        ~~~~~~~~~~~~ ^~~~~~~~~~~~~
+124.c(13): warning: no previous extern declaration for non-static variable 'lpit0_ch0_flag_counter' [-Wmissing-variable-declarations]
+int lpit0_ch0_flag_counter, lpit0_ch1_flag_counter, lpit0_ch2_flag_counter = 0;
+    ^
+124.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int lpit0_ch0_flag_counter, lpit0_ch1_flag_counter, lpit0_ch2_flag_counter = 0;
+^
+124.c(13): warning: no previous extern declaration for non-static variable 'lpit0_ch1_flag_counter' [-Wmissing-variable-declarations]
+int lpit0_ch0_flag_counter, lpit0_ch1_flag_counter, lpit0_ch2_flag_counter = 0;
+                            ^
+124.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int lpit0_ch0_flag_counter, lpit0_ch1_flag_counter, lpit0_ch2_flag_counter = 0;
+^
+124.c(17): warning: no previous extern declaration for non-static variable 'num' [-Wmissing-variable-declarations]
+unsigned int num,num0,num1,num2,num3 =0;
+             ^
+124.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int num,num0,num1,num2,num3 =0;
+^
+124.c(17): warning: no previous extern declaration for non-static variable 'num0' [-Wmissing-variable-declarations]
+unsigned int num,num0,num1,num2,num3 =0;
+                 ^
+124.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int num,num0,num1,num2,num3 =0;
+^
+124.c(17): warning: no previous extern declaration for non-static variable 'num1' [-Wmissing-variable-declarations]
+unsigned int num,num0,num1,num2,num3 =0;
+                      ^
+124.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int num,num0,num1,num2,num3 =0;
+^
+124.c(17): warning: no previous extern declaration for non-static variable 'num2' [-Wmissing-variable-declarations]
+unsigned int num,num0,num1,num2,num3 =0;
+                           ^
+124.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+unsigned int num,num0,num1,num2,num3 =0;
+^
+124.c(19): warning: no previous extern declaration for non-static variable 'temperature' [-Wmissing-variable-declarations]
+uint8_t temperature;
+        ^
+124.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t temperature;
+^
+124.c(20): warning: no previous extern declaration for non-static variable 'humidity' [-Wmissing-variable-declarations]
+uint8_t humidity;
+        ^
+124.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t humidity;
+^
+124.c(25): warning: no previous extern declaration for non-static variable 'adcResultInMv3' [-Wmissing-variable-declarations]
+uint32_t adcResultInMv3,adcResultInMv2=0;
+         ^
+124.c(25): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t adcResultInMv3,adcResultInMv2=0;
+^
+68 warnings generated.
+compiling 124.c...
+ADC.c(109): warning: implicit conversion loses integer precision: 'const volatile uint32_t' (aka 'const volatile unsigned int') to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  adc_result=ADC0->R[0];                                        /* For SW trigger mode, R[0] is used    */
+            ~^~~~~~~~~~
+C:/Users/310/AppData/Local/Arm/Packs/Keil/S32_SDK_DFP/1.3.0/platform/devices/S32K144/include/S32K144.h(467): note: expanded from macro 'ADC0'
+#define ADC0                                     ((ADC_Type *)ADC0_BASE)
+                                                 ^
+1 warning generated.
+compiling ADC.c...
+linking...
+Program Size: Code=3820 RO-data=676 RW-data=68 ZI-data=2108  
+".\Objects\2145.axf" - 0 Error(s), 80 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.S32_SDK_DFP.1.3.0.pack
+                Keil.S32_SDK_DFP.1.3.0
+                NXP S32 SDK S32K14x Device Support
+   * Component: Startup Version: 2.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\S32K144HAxxxLHx
+  .\RTE\_Target_1
+  C:\Users\310\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\310\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.3.0\platform\devices
+  C:\Users\310\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.3.0\platform\devices\common
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.0.0
+      Source file:   platform\devices\S32K144\startup\armc\startup_S32K144.s
+      Include file:  platform\devices\device_registers.h
+      Source file:   platform\devices\startup.c
+      Include file:  platform\devices\S32K144\startup\system_S32K144.h
+      Source file:   platform\devices\S32K144\startup\system_S32K144.c
+Build Time Elapsed:  00:00:13
+</pre>
+</body>
+</html>
